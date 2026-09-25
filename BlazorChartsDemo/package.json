@@ -1,0 +1,20 @@
+{
+  "name": "blazorchartsdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@bicharts/chart-host": "^0.6.34",
+    "d3": "^7.9.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

@@ -1,0 +1,52 @@
+State,Region,Revenue,Orders,ReturnRate
+Alabama,South,4050201,96362,3.0
+Alaska,West,602775,15077,2.4
+Arizona,West,6554752,158217,10.1
+Arkansas,South,2838335,67901,4.6
+California,West,31787858,761846,10.2
+Colorado,West,5229428,130259,6.4
+Connecticut,Northeast,3421058,83892,6.1
+Delaware,South,958486,22943,6.8
+District of Columbia,South,610446,15294,7.9
+Florida,South,18145741,447529,2.5
+Georgia,South,9304379,223474,4.6
+Hawaii,West,1450770,36103,7.7
+Idaho,West,1492518,35993,12.0
+Illinois,Midwest,11733472,284809,7.1
+Indiana,Midwest,6262184,152462,7.4
+Iowa,Midwest,3204071,80414,9.7
+Kansas,Midwest,2886920,70429,11.8
+Kentucky,South,4740345,118020,3.6
+Louisiana,South,3722876,91537,7.4
+Maine,Northeast,1410309,33750,2.4
+Maryland,South,6222957,153264,8.2
+Massachusetts,Northeast,6471595,160340,4.9
+Michigan,Midwest,9210017,230729,3.3
+Minnesota,Midwest,4589841,110126,9.5
+Mississippi,South,2530011,63467,10.0
+Missouri,Midwest,5143527,128359,9.4
+Montana,West,1007854,24635,10.6
+Nebraska,Midwest,1682708,41021,4.7
+Nevada,West,3345239,82859,2.1
+New Hampshire,Northeast,1236418,30899,6.1
+New Jersey,Northeast,7802366,193636,8.4
+New Mexico,West,1651398,40777,6.2
+New York,Northeast,16008775,393497,10.3
+North Carolina,South,10633372,252819,2.6
+North Dakota,Midwest,842927,20953,4.1
+Ohio,Midwest,11373329,275331,8.2
+Oklahoma,South,3779335,90115,3.8
+Oregon,West,3469129,83321,6.6
+Pennsylvania,Northeast,10579311,261656,9.8
+Rhode Island,Northeast,980655,23969,9.1
+South Carolina,South,4407319,106838,4.8
+South Dakota,Midwest,880990,21920,9.7
+Tennessee,South,5685506,140892,10.7
+Texas,South,28032109,687673,7.9
+Utah,West,3293877,80489,3.6
+Vermont,Northeast,521531,12939,3.8
+Virginia,South,8727281,215062,10.4
+Washington,West,7625339,189973,2.5
+West Virginia,South,1565927,37548,9.7
+Wisconsin,Midwest,5949166,141844,4.9
+Wyoming,West,576707,13880,8.4

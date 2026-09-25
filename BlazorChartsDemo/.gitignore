@@ -1,0 +1,6 @@
+bin/
+obj/
+node_modules/
+publish/
+publish-test/
+wwwroot/js/bic/

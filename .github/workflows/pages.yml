@@ -1,0 +1,64 @@
+# Builds the Blazor WebAssembly demo and publishes it to GitHub Pages.
+#
+# The page is static: both charts are committed source under BlazorChartsDemo/wwwroot/charts/, and
+# the page fetches them from its own origin. Nothing here needs a secret, and the published page
+# makes no call to any charting service - it runs on d3 and @bicharts/chart-host alone.
+name: Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: BlazorChartsDemo
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: BlazorChartsDemo/global.json
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: BlazorChartsDemo/package-lock.json
+      - run: npm ci
+      - run: dotnet publish -c Release -o ../publish
+      - name: Serve from the project-site path
+        working-directory: publish/wwwroot
+        run: |
+          # The app is served under /<repo>/, so every relative URL must resolve against it.
+          sed -i "s#<base href=\"/\" />#<base href=\"/${{ github.event.repository.name }}/\" />#" index.html
+          grep -q "<base href=\"/${{ github.event.repository.name }}/\" />" index.html
+          # Pages serves neither precompressed copies nor an index.html.br that still says "/".
+          find . -name '*.br' -delete -o -name '*.gz' -delete
+          # A deep link (/about) or a reload lands on 404.html; the app boots from it and routes.
+          cp index.html 404.html
+          # Jekyll would drop _framework/ - every folder that starts with an underscore.
+          touch .nojekyll
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: publish/wwwroot
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

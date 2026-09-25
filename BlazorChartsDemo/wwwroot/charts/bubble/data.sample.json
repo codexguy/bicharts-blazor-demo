@@ -1,0 +1,665 @@
+{
+  "columns": [
+    {
+      "name": "State",
+      "dataType": "String",
+      "isMeasure": false,
+      "sortedDirection": "asc",
+      "modalShare": 0.0196078431372549,
+      "minGroupCount": 1,
+      "isTemporal": false,
+      "blankCount": 0,
+      "distinctCount": 51,
+      "valueNature": "Categorical",
+      "avgValue": null,
+      "avgLength": 8.666666666666666,
+      "lowValue": null,
+      "highValue": null,
+      "medianValue": null,
+      "numericPrecision": 0,
+      "topCategories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "formatSignature": "TITLE_CASE_WORDS",
+      "isFreeText": true,
+      "geoKind": "us-state-name",
+      "geoMatchPct": 100
+    },
+    {
+      "name": "Region",
+      "dataType": "String",
+      "isMeasure": false,
+      "sortedDirection": "none",
+      "modalShare": 0.3333333333333333,
+      "minGroupCount": 9,
+      "isTemporal": false,
+      "blankCount": 0,
+      "distinctCount": 4,
+      "valueNature": "Categorical",
+      "avgValue": null,
+      "avgLength": 5.921568627450981,
+      "lowValue": null,
+      "highValue": null,
+      "medianValue": null,
+      "numericPrecision": 0,
+      "topCategories": [
+        17,
+        13,
+        12,
+        9
+      ],
+      "formatSignature": "TITLE_CASE_WORDS",
+      "isFreeText": true
+    },
+    {
+      "name": "Revenue",
+      "dataType": "Integer",
+      "isMeasure": true,
+      "sortedDirection": "none",
+      "isTemporal": false,
+      "blankCount": 0,
+      "distinctCount": 51,
+      "valueNature": "Continuous",
+      "avgValue": 5808499,
+      "avgLength": 7,
+      "lowValue": 521531,
+      "highValue": 31787858,
+      "medianValue": 3779335,
+      "numericPrecision": 0,
+      "skewness": 2.3951299632955747,
+      "stdDev": 6280973.7010996435,
+      "sum": 296233440,
+      "topCategories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "quantiles": {
+        "p05": 602775,
+        "p25": 1492518,
+        "p75": 6554752,
+        "p95": 16008775
+      },
+      "additivity": "unknown",
+      "relativeDispersion": 2.776,
+      "nonBlankGroups": [
+        {
+          "otherColumn": "Region",
+          "nonBlankGroupCount": 4
+        }
+      ],
+      "groupDiscrimination": [
+        {
+          "otherColumn": "Region",
+          "eta2": 0.013
+        }
+      ],
+      "spreadDiscrimination": [
+        {
+          "otherColumn": "Region",
+          "spreadRatio": 0.5506
+        }
+      ],
+      "maxAbsMeasureCorrelation": 1,
+      "collinearWithMeasures": [
+        "Orders"
+      ]
+    },
+    {
+      "name": "Orders",
+      "dataType": "Integer",
+      "isMeasure": true,
+      "sortedDirection": "none",
+      "isTemporal": false,
+      "blankCount": 0,
+      "distinctCount": 51,
+      "valueNature": "Continuous",
+      "avgValue": 141905,
+      "avgLength": 5.470588235294118,
+      "lowValue": 12939,
+      "highValue": 761846,
+      "medianValue": 91537,
+      "numericPrecision": 0,
+      "skewness": 2.3590887145773785,
+      "stdDev": 152636.33876051827,
+      "sum": 7237142,
+      "topCategories": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "quantiles": {
+        "p05": 15077,
+        "p25": 36103,
+        "p75": 160340,
+        "p95": 393497
+      },
+      "additivity": "unknown",
+      "relativeDispersion": 2.768,
+      "nonBlankGroups": [
+        {
+          "otherColumn": "Region",
+          "nonBlankGroupCount": 4
+        }
+      ],
+      "groupDiscrimination": [
+        {
+          "otherColumn": "Region",
+          "eta2": 0.0131
+        }
+      ],
+      "spreadDiscrimination": [
+        {
+          "otherColumn": "Region",
+          "spreadRatio": 0.5511
+        }
+      ],
+      "maxAbsMeasureCorrelation": 1,
+      "collinearWithMeasures": [
+        "Revenue"
+      ]
+    },
+    {
+      "name": "ReturnRate",
+      "dataType": "Decimal",
+      "isMeasure": true,
+      "sortedDirection": "none",
+      "isTemporal": false,
+      "blankCount": 0,
+      "distinctCount": 38,
+      "valueNature": "Ordinal",
+      "avgValue": 6.823529411764704,
+      "avgLength": 3.0588235294117645,
+      "lowValue": 2.1,
+      "highValue": 12,
+      "medianValue": 7.1,
+      "numericPrecision": 1,
+      "skewness": -0.06843240853856787,
+      "stdDev": 2.8729699216496463,
+      "sum": 347.9999999999999,
+      "topCategories": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "quantiles": {
+        "p05": 2.4,
+        "p25": 4.1,
+        "p75": 9.5,
+        "p95": 10.6
+      },
+      "additivity": "unknown",
+      "relativeDispersion": 1.085,
+      "nonBlankGroups": [
+        {
+          "otherColumn": "Region",
+          "nonBlankGroupCount": 4
+        }
+      ],
+      "groupDiscrimination": [
+        {
+          "otherColumn": "Region",
+          "eta2": 0.0203
+        }
+      ],
+      "spreadDiscrimination": [
+        {
+          "otherColumn": "Region",
+          "spreadRatio": 0.4259
+        }
+      ],
+      "maxAbsMeasureCorrelation": 0.092
+    },
+    {
+      "name": "__rowIdx__",
+      "dataType": "Integer",
+      "isMeasure": false,
+      "modelDesc": ""
+    }
+  ],
+  "rows": [
+    [
+      "Alabama",
+      "South",
+      4050201,
+      96362,
+      3,
+      0
+    ],
+    [
+      "Alaska",
+      "West",
+      602775,
+      15077,
+      2.4,
+      1
+    ],
+    [
+      "Arizona",
+      "West",
+      6554752,
+      158217,
+      10.1,
+      2
+    ],
+    [
+      "Arkansas",
+      "South",
+      2838335,
+      67901,
+      4.6,
+      3
+    ],
+    [
+      "California",
+      "West",
+      31787858,
+      761846,
+      10.2,
+      4
+    ],
+    [
+      "Colorado",
+      "West",
+      5229428,
+      130259,
+      6.4,
+      5
+    ],
+    [
+      "Connecticut",
+      "Northeast",
+      3421058,
+      83892,
+      6.1,
+      6
+    ],
+    [
+      "Delaware",
+      "South",
+      958486,
+      22943,
+      6.8,
+      7
+    ],
+    [
+      "District of Columbia",
+      "South",
+      610446,
+      15294,
+      7.9,
+      8
+    ],
+    [
+      "Florida",
+      "South",
+      18145741,
+      447529,
+      2.5,
+      9
+    ],
+    [
+      "Georgia",
+      "South",
+      9304379,
+      223474,
+      4.6,
+      10
+    ],
+    [
+      "Hawaii",
+      "West",
+      1450770,
+      36103,
+      7.7,
+      11
+    ],
+    [
+      "Idaho",
+      "West",
+      1492518,
+      35993,
+      12,
+      12
+    ],
+    [
+      "Illinois",
+      "Midwest",
+      11733472,
+      284809,
+      7.1,
+      13
+    ],
+    [
+      "Indiana",
+      "Midwest",
+      6262184,
+      152462,
+      7.4,
+      14
+    ],
+    [
+      "Iowa",
+      "Midwest",
+      3204071,
+      80414,
+      9.7,
+      15
+    ],
+    [
+      "Kansas",
+      "Midwest",
+      2886920,
+      70429,
+      11.8,
+      16
+    ],
+    [
+      "Kentucky",
+      "South",
+      4740345,
+      118020,
+      3.6,
+      17
+    ],
+    [
+      "Louisiana",
+      "South",
+      3722876,
+      91537,
+      7.4,
+      18
+    ],
+    [
+      "Maine",
+      "Northeast",
+      1410309,
+      33750,
+      2.4,
+      19
+    ],
+    [
+      "Maryland",
+      "South",
+      6222957,
+      153264,
+      8.2,
+      20
+    ],
+    [
+      "Massachusetts",
+      "Northeast",
+      6471595,
+      160340,
+      4.9,
+      21
+    ],
+    [
+      "Michigan",
+      "Midwest",
+      9210017,
+      230729,
+      3.3,
+      22
+    ],
+    [
+      "Minnesota",
+      "Midwest",
+      4589841,
+      110126,
+      9.5,
+      23
+    ],
+    [
+      "Mississippi",
+      "South",
+      2530011,
+      63467,
+      10,
+      24
+    ],
+    [
+      "Missouri",
+      "Midwest",
+      5143527,
+      128359,
+      9.4,
+      25
+    ],
+    [
+      "Montana",
+      "West",
+      1007854,
+      24635,
+      10.6,
+      26
+    ],
+    [
+      "Nebraska",
+      "Midwest",
+      1682708,
+      41021,
+      4.7,
+      27
+    ],
+    [
+      "Nevada",
+      "West",
+      3345239,
+      82859,
+      2.1,
+      28
+    ],
+    [
+      "New Hampshire",
+      "Northeast",
+      1236418,
+      30899,
+      6.1,
+      29
+    ],
+    [
+      "New Jersey",
+      "Northeast",
+      7802366,
+      193636,
+      8.4,
+      30
+    ],
+    [
+      "New Mexico",
+      "West",
+      1651398,
+      40777,
+      6.2,
+      31
+    ],
+    [
+      "New York",
+      "Northeast",
+      16008775,
+      393497,
+      10.3,
+      32
+    ],
+    [
+      "North Carolina",
+      "South",
+      10633372,
+      252819,
+      2.6,
+      33
+    ],
+    [
+      "North Dakota",
+      "Midwest",
+      842927,
+      20953,
+      4.1,
+      34
+    ],
+    [
+      "Ohio",
+      "Midwest",
+      11373329,
+      275331,
+      8.2,
+      35
+    ],
+    [
+      "Oklahoma",
+      "South",
+      3779335,
+      90115,
+      3.8,
+      36
+    ],
+    [
+      "Oregon",
+      "West",
+      3469129,
+      83321,
+      6.6,
+      37
+    ],
+    [
+      "Pennsylvania",
+      "Northeast",
+      10579311,
+      261656,
+      9.8,
+      38
+    ],
+    [
+      "Rhode Island",
+      "Northeast",
+      980655,
+      23969,
+      9.1,
+      39
+    ],
+    [
+      "South Carolina",
+      "South",
+      4407319,
+      106838,
+      4.8,
+      40
+    ],
+    [
+      "South Dakota",
+      "Midwest",
+      880990,
+      21920,
+      9.7,
+      41
+    ],
+    [
+      "Tennessee",
+      "South",
+      5685506,
+      140892,
+      10.7,
+      42
+    ],
+    [
+      "Texas",
+      "South",
+      28032109,
+      687673,
+      7.9,
+      43
+    ],
+    [
+      "Utah",
+      "West",
+      3293877,
+      80489,
+      3.6,
+      44
+    ],
+    [
+      "Vermont",
+      "Northeast",
+      521531,
+      12939,
+      3.8,
+      45
+    ],
+    [
+      "Virginia",
+      "South",
+      8727281,
+      215062,
+      10.4,
+      46
+    ],
+    [
+      "Washington",
+      "West",
+      7625339,
+      189973,
+      2.5,
+      47
+    ],
+    [
+      "West Virginia",
+      "South",
+      1565927,
+      37548,
+      9.7,
+      48
+    ],
+    [
+      "Wisconsin",
+      "Midwest",
+      5949166,
+      141844,
+      4.9,
+      49
+    ],
+    [
+      "Wyoming",
+      "West",
+      576707,
+      13880,
+      8.4,
+      50
+    ]
+  ],
+  "dateCellsAreUtcDays": true,
+  "meta": {
+    "hostContract": "1.12.0",
+    "chart": "Bubble chart"
+  }
+}

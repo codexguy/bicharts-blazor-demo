@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OverrideHtmlAssetPlaceholders>true</OverrideHtmlAssetPlaceholders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.12" PrivateAssets="all" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <DefaultItemExcludes>$(DefaultItemExcludes);node_modules/**</DefaultItemExcludes>
+  </PropertyGroup>
+  <Target Name="BundleBicCharts" BeforeTargets="BeforeBuild">
+    <Exec Command="npm ci" Condition="!Exists('node_modules')" />
+    <RemoveDir Directories="wwwroot/js/bic" />
+    <Exec Command="npx esbuild Scripts/bic.entry.js --bundle --format=esm --splitting --minify --outdir=wwwroot/js/bic" />
+    <ItemGroup>
+      <Content Include="wwwroot/js/bic/**" Exclude="@(Content)" />
+    </ItemGroup>
+  </Target>
+
+</Project>
