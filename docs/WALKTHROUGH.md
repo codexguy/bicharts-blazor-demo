@@ -1,6 +1,6 @@
 # Fresh Blazor demo: the exact steps
 
-Current as of **2026-09-25**, against `@bicharts/chart-host@0.6.34`, `@bicharts/chart-mcp` and its
+Current as of **2026-09-26**, against `@bicharts/chart-host@0.6.45`, `@bicharts/chart-mcp` and its
 `bic-charts` agent skill. Everything below runs from npm and NuGet, with nothing to clone or build.
 
 The point of the exercise: *a BIC chart is generated source you own, not a service you call.* Steps 2
