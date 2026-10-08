@@ -11,7 +11,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@bicharts/chart-host": "^0.6.77",
+    "@bicharts/chart-host": "^0.6.78",
     "d3": "^7.9.0"
   },
   "devDependencies": {
